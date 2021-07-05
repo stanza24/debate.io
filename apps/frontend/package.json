@@ -1,0 +1,87 @@
+{
+  "name": "@debate/frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "author": "",
+  "main": "src/index.js",
+  "browserslist": [
+    "last 1 version",
+    "ie >= 11",
+    "edge >= 40",
+    "chrome >= 70",
+    "safari >= 11",
+    "not OperaMini all",
+    "not Blackberry 10"
+  ],
+  "engines": {
+    "node": ">=13",
+    "npm": ">=6"
+  },
+  "scripts": {
+    "analyze": "npm run build -- --env presets=analyze",
+    "lint": "eslint --debug src/",
+    "lint:fix": "eslint --debug src/ --fix && prettier --write  src/",
+    "lint:style": "npx stylelint 'src/**/*.less' --fix --config stylelint.config.js",
+    "prettier": "prettier --write src/",
+    "dev": "node -r dotenv/config node_modules/@utils-npm/build-kit/scripts/start.js dotenv_config_path=.env.development",
+    "build": "node node_modules/@utils-npm/build-kit/scripts/build.js",
+    "test": "jest --passWithNoTests --setupFiles dotenv/config",
+    "test:coverage": "jest --passWithNoTests --coverage --setupFiles dotenv/config"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "npm run lint:fix",
+      "git add"
+    ],
+    "src/**/*.less": [
+      "npm run lint:style"
+    ]
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@debate/common": "1.0.0",
+    "@utils-npm/async-utils": "1.0.0",
+    "@utils-npm/axios-services": "1.0.0",
+    "@utils-npm/build-kit": "1.0.0",
+    "@utils-npm/helper-utils": "1.0.0",
+    "@utils-npm/router-utils": "1.0.0",
+    "@utils-npm/thunk-utils": "1.0.0",
+    "antd": "4.14.1",
+    "classnames": "2.2.6",
+    "history": "4.10.1",
+    "i18next": "20.1.0",
+    "lodash": "4.17.21",
+    "moment": "2.29.1",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-i18next": "11.8.3",
+    "react-redux": "7.2.2",
+    "react-router": "5.2.0",
+    "react-router-dom": "5.2.0",
+    "reduce-reducers": "1.0.4",
+    "redux": "4.0.5",
+    "redux-actions": "2.6.5",
+    "redux-thunk": "2.3.0",
+    "uuid": "8.3.2"
+  },
+  "devDependencies": {
+    "@utils-npm/build-kit": "1.0.0",
+    "@utils-npm/qg-kit": "1.0.0",
+    "@types/classnames": "2.2.11",
+    "@types/history": "4.7.8",
+    "@types/lodash": "4.14.168",
+    "@types/react": "17.0.0",
+    "@types/react-color": "3.0.4",
+    "@types/react-dom": "17.0.0",
+    "@types/react-redux": "7.1.12",
+    "@types/react-router": "5.1.8",
+    "@types/react-router-dom": "5.1.6",
+    "@types/redux-actions": "2.6.1",
+    "@types/uuid": "8.3.0",
+    "autoprefixer": "10.1.0",
+    "dotenv": "8.2.0",
+    "redux-immutable-state-invariant": "2.1.0",
+    "redux-logger": "3.0.6"
+  }
+}

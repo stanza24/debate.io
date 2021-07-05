@@ -1,0 +1,8 @@
+{
+  "packages": [
+    "apps/*",
+    "packages/*",
+    "packages/utils-npm/*"
+  ],
+  "version": "0.0.0"
+}

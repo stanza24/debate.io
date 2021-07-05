@@ -1,0 +1,19 @@
+import * as React from 'react';
+
+import './{{pascalCase componentName}}.less';
+
+/**
+ * Свойства компонента {{pascalCase componentName}}
+ */
+interface IProps {}
+
+/**
+ * Описание компонента
+ */
+const {{pascalCase componentName}}: React.FunctionComponent<IProps> = (props: IProps) => (
+    <div className="{{camelCase componentName}}">
+        {{pascalCase componentName}}
+    </div>
+);
+
+export default {{pascalCase componentName}};

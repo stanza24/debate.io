@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1" />
+        <title><%= projectTitle  %></title>
+    </head>
+    <body>
+        <noscript>Ваш браузер не поддерживает JavaScript :(</noscript>
+        <div id="applicationContainer"></div>
+        <% if (isProd && useCDNReact) { %>
+            <script crossorigin src="https://unpkg.com/react@<%= reactVersion %>/umd/react.production.min.js" defer></script>
+            <script crossorigin src="https://unpkg.com/react-dom@<%= reactVersion %>/umd/react-dom.production.min.js" defer></script>
+          <% } %>
+    </body>
+</html>

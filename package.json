@@ -1,0 +1,46 @@
+{
+  "name": "debate",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "browserslist": [
+    "last 1 version",
+    "ie >= 11",
+    "edge >= 40",
+    "chrome >= 70",
+    "safari >= 11",
+    "not OperaMini all",
+    "not Blackberry 10"
+  ],
+  "engines": {
+    "node": ">=13",
+    "npm": ">=6"
+  },
+  "scripts": {
+    "lint": "lerna run lint --parallel",
+    "lint:check": "lerna run lint:check --parallel",
+    "lint:style": "lerna run lint:style --parallel",
+    "dev": "lerna run dev --parallel --scope=@debate/{frontend,backend}",
+    "dev:frontend": "lerna run dev --parallel --scope @debate/frontend",
+    "dev:backend": "lerna run dev --parallel --scope @debate/backend",
+    "test": "lerna run test --parallel --scope=@debate/{frontend,backend}",
+    "test:frontend": "lerna run test --parallel --scope @debate/frontend",
+    "test:backend": "lerna run test --parallel --scope @debate/backend",
+    "test:coverage": "lerna run test:coverage --parallel --scope=@debate/{frontend,backend}",
+    "test:coverage:all": "jest --passWithNoTests --coverage --setupFiles dotenv/config",
+    "test:coverage:frontend": "lerna run test:coverage --parallel --scope @debate/frontend",
+    "test:coverage:backend": "lerna run test:coverage --parallel --scope @debate/backend",
+    "packages:init": "lerna bootstrap --hoist",
+    "packages:clean": "lerna clean --yes"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "4.17.21",
+    "react": "17.0.1"
+  },
+  "devDependencies": {
+    "lerna": "4.0.0"
+  }
+}

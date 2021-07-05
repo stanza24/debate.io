@@ -1,0 +1,13 @@
+/**
+ * Состояние модуля {{pascalCase componentName}}
+ */
+export interface I{{pascalCase componentName}}State {
+    example: IExample;
+}
+
+/**
+ * Базовый тип, тут вы можете начинать с типизацями.
+ */
+export interface IExample {
+    name: string;
+}

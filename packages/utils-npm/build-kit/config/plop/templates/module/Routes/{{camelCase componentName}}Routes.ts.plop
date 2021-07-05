@@ -1,0 +1,11 @@
+import {{curlyMe (suffixMe (pascalCase componentName) 'Page')}} from 'Modules/{{pascalCase componentName}}/Pages/{{pascalCase componentName}}/{{pascalCase componentName}}Page';
+
+/**
+ * Роуты {{camelCase componentName}}
+ */
+export const {{camelCase componentName}}Routes = [
+    {
+        path: '/{{dashCase componentName}}',
+        component: {{pascalCase componentName}}Page,
+    },
+];

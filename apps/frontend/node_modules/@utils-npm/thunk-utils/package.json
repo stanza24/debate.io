@@ -1,0 +1,62 @@
+{
+    "name": "@utils-npm/thunk-utils",
+    "version": "1.0.0",
+    "private": true,
+    "main": "./src/index.ts",
+    "browserslist": [
+        "last 1 version",
+        "ie >= 11",
+        "edge >= 40",
+        "chrome >= 70",
+        "safari >= 11",
+        "not OperaMini all",
+        "not Blackberry 10"
+    ],
+    "engines": {
+        "node": ">=13",
+        "npm": ">=6"
+    },
+    "scripts": {
+        "lint": "eslint --debug src/",
+        "lint:check": "eslint src/ && prettier --check src/",
+        "lint:fix": "eslint --debug src/ --fix && prettier --write  src/",
+        "lint:style": "npx stylelint 'src/**/*.less' --fix --config stylelint.config.js",
+        "lint:staged": "lint-staged",
+        "prettier": "prettier --write src/",
+        "webpack-dev-server": "webpack-dev-server",
+        "build": "rimraf ./dist & tsc -p tsconfig.json",
+        "tsc": "node --max-old-space-size=4096 ../../node_modules/typescript/bin/tsc --noEmit -p ./tsconfig.json",
+        "hooks:pre-commit:fix": "npm run tsc && npm run lint:staged",
+        "commit": "git-cz",
+        "generate": "plop --plopfile config/plop/plop.config.js",
+        "test": "BUNDLE_PATH=out/survey jest",
+        "test:coverage": "BUNDLE_PATH=out/survey jest --coverage"
+    },
+    "config": {
+        "commitizen": {
+            "path": "node_modules/cz-conventional-changelog"
+        }
+    },
+    "lint-staged": {
+        "src/**/*.{ts,tsx}": [
+            "npm run lint:fix",
+            "git add"
+        ],
+        "src/**/*.less": [
+            "npm run lint:style"
+        ]
+    },
+    "license": "ISC",
+    "devDependencies": {
+        "@utils-npm/async-utils": "1.0.0",
+        "@utils-npm/qg-kit": "1.0.0",
+        "lodash": "4.17.21",
+        "redux-actions": "2.6.5",
+        "typescript": "4.1.2"
+    },
+    "peerDependencies": {
+        "@utils-npm/async-utils": "1.0.0",
+        "lodash": ">=4.x.x",
+        "redux-actions": ">=2.x.x"
+    }
+}
