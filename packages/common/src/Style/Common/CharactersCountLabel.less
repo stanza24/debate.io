@@ -1,0 +1,28 @@
+.input-with-characters-count {
+    position: relative;
+    width: 100%;
+
+    &::after {
+        position: absolute;
+        content: attr(data-character-count) "/" attr(data-max-length);
+        right: 2px;
+        top: 100%;
+        margin-top: 2px;
+        color: @color-brown-grey;
+        z-index: 1;
+        background-color: @color-temp-gray;
+        border-radius: 6px;
+        padding: 0 6px;
+        opacity: 0;
+        transition: opacity 300ms;
+
+        .main-text-12();
+    }
+
+    &:hover,
+    &.show-label {
+        &::after {
+            opacity: 1;
+        }
+    }
+}

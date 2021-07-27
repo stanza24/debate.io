@@ -1,0 +1,29 @@
+@base: 4px;
+@base-border-width: 1px;
+@bold-border-width: 2px;
+@small-border-radius: @base*0.5;
+@base-border-radius: @base;
+@large-border-radius: @base*2.5;
+
+@base-border: @base-border-width solid @color-light-blue-grey;
+@active-border: @bold-border-width solid @color-blue-light-100;
+@dotted-base-border: @base-border-width dotted @color-light-blue-grey;
+@dashed-base-border: @base-border-width dashed @color-light-blue-grey;
+
+.text-input {
+    border-radius: @base-border-radius;
+    border: @base-border;
+    padding: @base*2;
+    background-color: @color-white;
+}
+
+@shadow-hover: 0 @base @base*2 0 rgba(0, 0, 0, 0.3);
+@shadow: 0 @base @base*2 0 rgba(0, 0, 0, 0.08);
+@shadow-inner: 0 @base*0.25 @base*0.75 rgba(0, 0, 0, 0.3);
+
+.hide {
+    width: @base*0.25;
+    height: @base*0.25;
+    visibility: hidden;
+    display: none;
+}

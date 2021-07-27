@@ -1,0 +1,131 @@
+@font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@font-weight-light: 300;
+@font-weight-regular: 400;
+@font-weight-medium: 500;
+@font-weight-bold: 700;
+
+// font-color
+@font-color-grey: @color-brown-grey;
+@font-color-dark-grey: @color-dark-blue-grey;
+@font-color-black: @color-black-100;
+@font-color-blue: @color-blue-light-100;
+@font-color-green: @color-green;
+@font-color-red: @color-red;
+@font-color-orange: @color-yellow-orange;
+
+#applicationContainer {
+    font-family: @font-family-base;
+    color: @font-color-dark-grey;
+    font-weight: @font-weight-regular;
+    .main-text-14();
+}
+
+.heading-one() {
+    font-size: 22px !important;
+    line-height: 26px !important;
+}
+
+.heading-two() {
+    font-size: 18px !important;
+    line-height: 22px !important;
+}
+
+.heading-margin() {
+    margin: 0 !important;
+}
+
+.main-text-16 {
+    font-size: 16px !important;
+    line-height: 18px !important;
+}
+
+.main-text-14 {
+    font-size: 14px !important;
+    line-height: 16px !important;
+}
+
+.main-text-12 {
+    font-size: 12px !important;
+    line-height: 14px !important;
+}
+
+// headings
+h1 {
+    .heading-one();
+    .heading-margin();
+    font-weight: @font-weight-bold !important;
+}
+
+h2 {
+    .heading-two();
+    .heading-margin();
+    font-weight: @font-weight-bold !important;
+}
+
+h3 {
+    .heading-two();
+    .heading-margin();
+    font-weight: @font-weight-medium !important;
+}
+
+h4 {
+    .main-text-16();
+    font-weight: @font-weight-bold !important;
+}
+
+h5 {
+    .main-text-14();
+    font-weight: @font-weight-bold !important;
+}
+
+// indent
+.normalize-line-height {
+    line-height: normal;
+}
+
+.block-text {
+    display: block !important;
+}
+
+.text-pre {
+    white-space: pre-wrap;
+}
+
+.text-center {
+    display: flex;
+    align-items: center;
+}
+
+// styling
+.text-color-white {
+    color: @color-white !important;
+}
+
+.text-dark-blue-grey {
+    color: @color-dark-blue-grey !important;
+}
+
+.text-secondary {
+    color: @font-color-grey !important;
+}
+
+.text-blue-light {
+    color: @color-blue-light-100 !important;
+}
+
+.text-dark-mint {
+    color: @color-dark-mint !important;
+}
+
+.text-brown-grey {
+    color: @color-brown-grey !important;
+}
+
+.text-error-color {
+    color: @color-light-burgundy !important;
+}
+
+.font-bold {
+    font-weight: @font-weight-bold;
+}

@@ -95,6 +95,7 @@ export const createHistoryUtils = (historyApp: History): IHistoryUtils => {
         path: string,
         {params, preserveParameterNames, search, ...locationDescriptorObject}: IRedirectParams = {}
     ): void => {
+        if (location().pathname === generatePath(path, params)) return;
         if (locationDescriptorObject) {
             historyApp.push({
                 pathname: generatePath(path, params),

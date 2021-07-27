@@ -1,0 +1,10 @@
+{
+    "Components": {
+        "AccountTabbedPane": {
+            "fullName": "{{firstName}} {{lastName}}",
+            "userName": "@{{userName}}",
+            "sectionTab_PROFILE": "Профиль",
+            "sectionTab_SETTINGS": "Настройки"
+        }
+    }
+}

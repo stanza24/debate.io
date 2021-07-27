@@ -1,0 +1,53 @@
+.client-layout {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-bottom: @base*4;
+
+    .layout-centering-container {
+        margin-left: calc(50vw - @base*150);
+        height: 100%;
+        width: @base*300;
+    }
+
+    .ant-layout-header {
+        padding: 0;
+    }
+
+    .page-layout {
+        height: 100%;
+        background-color: @color-pale-grey;
+        overflow-y: auto;
+
+        .page-content {
+            padding: @base*6 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+
+            .page-workarea {
+                position: relative;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+
+                .workarea-container {
+                    flex: 1;
+                }
+
+                & > .ant-spin-nested-loading {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+
+                    & > .ant-spin-container {
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+}
