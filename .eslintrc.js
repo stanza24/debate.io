@@ -1,5 +1,5 @@
 module.exports = {
-    extends: require.resolve('./utils-npm/qg-kit/eslint/strict'),
+    extends: require.resolve('./packages/utils-npm/qg-kit/eslint/strict'),
     rules: {
         // Переопределяем правило для использования утилит
         'no-restricted-imports': [

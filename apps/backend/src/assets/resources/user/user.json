@@ -1,0 +1,40 @@
+{
+    "id": "1",
+    "role": "ADMIN",
+    "username": "stanzzza",
+    "email": "va11no@yandex.ru",
+    "profile": {
+        "firstName": "Иван",
+        "lastName": "Панкратов",
+        "middleName": "Викторович",
+        "countryName": "Россия",
+        "aboutMe": "Frontend Dev",
+        "favCategories": ["Космос", "Автомобили"],
+        "avatar": {
+            "thumbnail": "https://gravatar.com/avatar/1d9067e52a6e9138faf994fa7e4558c7?s=50",
+            "preview": "https://gravatar.com/avatar/1d9067e52a6e9138faf994fa7e4558c7?s=500"
+        }
+    },
+    "progress": {
+        "rank": 0,
+        "exp": 1,
+        "expToNewRank": 10
+    },
+    "achievements": {
+        "done": [
+            {
+                "name": "Admin",
+                "icon": "https://img.icons8.com/office/50/000000/administrator-male--v1.png"
+            },
+            {
+                "name": "Boomer",
+                "icon": "https://img.icons8.com/fluency/50/000000/farmer-male.png"
+            },
+            {
+                "name": "Wolf",
+                "icon": "https://img.icons8.com/emoji/50/000000/wolf-emoji.png"
+            }
+        ],
+        "total": 512
+    }
+}

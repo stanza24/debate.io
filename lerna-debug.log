@@ -1,11 +1,42 @@
 0 silly argv {
-0 silly argv   _: [ 'add' ],
-0 silly argv   globs: [],
+0 silly argv   _: [ 'clean' ],
+0 silly argv   yes: true,
+0 silly argv   y: true,
 0 silly argv   lernaVersion: '4.0.0',
-0 silly argv   '$0': '..\\..\\..\\node_modules\\lerna\\cli.js',
-0 silly argv   pkg: '@utils-npm/qg-kit'
+0 silly argv   '$0': 'C:\\Users\\Ivan\\AppData\\Roaming\\npm\\node_modules\\lerna\\cli.js'
 0 silly argv }
 1 notice cli v4.0.0
 2 verbose rootPath D:\Ivan\Pet\Debate
-3 error HttpErrorGeneral: 404 Not Found - GET https://registry.npmjs.org/@utils-npm%2fqg-kit - Not found
-3 error     at D:\Ivan\Pet\Debate\node_modules\npm-registry-fetch\check-response.js:95:15
+3 info clean removing D:\Ivan\Pet\Debate\apps\backend\node_modules
+4 silly rimrafDir D:\Ivan\Pet\Debate\apps\backend\node_modules
+5 info clean removing D:\Ivan\Pet\Debate\apps\frontend\node_modules
+6 silly rimrafDir D:\Ivan\Pet\Debate\apps\frontend\node_modules
+7 info clean removing D:\Ivan\Pet\Debate\packages\common\node_modules
+8 silly rimrafDir D:\Ivan\Pet\Debate\packages\common\node_modules
+9 info clean removing D:\Ivan\Pet\Debate\packages\utils-npm\async-utils\node_modules
+10 silly rimrafDir D:\Ivan\Pet\Debate\packages\utils-npm\async-utils\node_modules
+11 info clean removing D:\Ivan\Pet\Debate\packages\utils-npm\axios-services\node_modules
+12 silly rimrafDir D:\Ivan\Pet\Debate\packages\utils-npm\axios-services\node_modules
+13 info clean removing D:\Ivan\Pet\Debate\packages\utils-npm\build-kit\node_modules
+14 silly rimrafDir D:\Ivan\Pet\Debate\packages\utils-npm\build-kit\node_modules
+15 verbose rimrafDir removed D:\Ivan\Pet\Debate\packages\utils-npm\async-utils\node_modules
+16 info clean removing D:\Ivan\Pet\Debate\packages\utils-npm\helper-utils\node_modules
+17 silly rimrafDir D:\Ivan\Pet\Debate\packages\utils-npm\helper-utils\node_modules
+18 verbose rimrafDir removed D:\Ivan\Pet\Debate\packages\utils-npm\axios-services\node_modules
+19 info clean removing D:\Ivan\Pet\Debate\packages\utils-npm\qg-kit\node_modules
+20 silly rimrafDir D:\Ivan\Pet\Debate\packages\utils-npm\qg-kit\node_modules
+21 verbose rimrafDir removed D:\Ivan\Pet\Debate\packages\utils-npm\build-kit\node_modules
+22 info clean removing D:\Ivan\Pet\Debate\packages\utils-npm\router-utils\node_modules
+23 silly rimrafDir D:\Ivan\Pet\Debate\packages\utils-npm\router-utils\node_modules
+24 verbose rimrafDir removed D:\Ivan\Pet\Debate\packages\common\node_modules
+25 info clean removing D:\Ivan\Pet\Debate\packages\utils-npm\thunk-utils\node_modules
+26 silly rimrafDir D:\Ivan\Pet\Debate\packages\utils-npm\thunk-utils\node_modules
+27 verbose rimrafDir removed D:\Ivan\Pet\Debate\packages\utils-npm\qg-kit\node_modules
+28 verbose rimrafDir removed D:\Ivan\Pet\Debate\packages\utils-npm\helper-utils\node_modules
+29 verbose rimrafDir removed D:\Ivan\Pet\Debate\packages\utils-npm\router-utils\node_modules
+30 verbose rimrafDir removed D:\Ivan\Pet\Debate\packages\utils-npm\thunk-utils\node_modules
+31 verbose rimrafDir removed D:\Ivan\Pet\Debate\apps\backend\node_modules
+32 error Error: Command failed with exit code 1: C:\Program Files\nodejs\node.exe C:\Users\Ivan\AppData\Roaming\npm\node_modules\lerna\node_modules\rimraf\bin.js --no-glob D:\Ivan\Pet\Debate\apps\frontend\node_modules\
+32 error     at makeError (C:\Users\Ivan\AppData\Roaming\npm\node_modules\lerna\node_modules\execa\lib\error.js:59:11)
+32 error     at handlePromise (C:\Users\Ivan\AppData\Roaming\npm\node_modules\lerna\node_modules\execa\index.js:114:26)
+32 error     at processTicksAndRejections (internal/process/task_queues.js:93:5)

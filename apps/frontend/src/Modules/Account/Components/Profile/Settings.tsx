@@ -1,1 +1,1 @@
-export const Settings = () => <div>А здесь настройки</div>;
+export const Settings = () => <div>Тут настройки</div>;

@@ -1,12 +1,12 @@
-import type {FunctionComponent} from 'react';
-import {EAccountSection} from '../Enums/AccounEnum';
 import {Col, Image, Row, Tabs, Typography} from 'antd';
-import {useSelector} from 'react-redux';
-import {userSelector} from 'Core/CoreSettings/CoreAuthSettings/Store/Selectors/CoreAuthSettings';
+import type {FunctionComponent} from 'react';
 import {useCallback} from 'react';
-import {RouterUtils} from 'Core/Utils/RouterUtils';
-import {ROUTE} from 'Core/Const';
 import {useTranslation} from 'react-i18next';
+import {useSelector} from 'react-redux';
+import {ROUTE} from 'Core/Const';
+import {userSelector} from 'Core/CoreSettings/CoreAuthSettings/Store/Selectors/CoreAuthSettingsSelector';
+import {RouterUtils} from 'Core/Utils/RouterUtils';
+import {EAccountSection} from '../Enums/AccounEnum';
 
 /**
  * Модель прокидываемых в компонент свойств.
@@ -19,14 +19,14 @@ interface IProps {
 
 /** Компонент панели вкладок профиля. */
 export const AccountTabbedPane: FunctionComponent<IProps> = ({section}: IProps) => {
-    const {user} = useSelector(userSelector);
+    const user = useSelector(userSelector);
     const {t} = useTranslation();
 
     /** Обработчик клика на вкладку этапа анкеты. */
-    const handleSetActiveTab = useCallback((section: EAccountSection): void => {
+    const handleSetActiveTab = useCallback((newSection: EAccountSection): void => {
         RouterUtils.redirect(ROUTE.CLIENT.ACCOUNT.SECTIONS.PATH, {
             params: {
-                section,
+                section: newSection,
             },
         });
     }, []);
@@ -34,43 +34,46 @@ export const AccountTabbedPane: FunctionComponent<IProps> = ({section}: IProps) 
     return (
         <div>
             <Row align="middle" gutter={16}>
-                {user.avatar && (
-                    <Col>
-                        <Image
-                            preview={{
-                                mask: null,
-                            }}
-                            width={50}
-                            src={user.avatar}
-                            alt="image"
-                            className="account-page-avatar-preview"
-                        />
-                    </Col>
-                )}
+                <Col>
+                    <Image
+                        preview={
+                            user.profile.avatar
+                                ? {
+                                      mask: null,
+                                      src: user.profile.avatar.preview || user.profile.avatar.thumbnail,
+                                  }
+                                : false
+                        }
+                        width={50}
+                        src={user.profile.avatar?.thumbnail || 'https://img.icons8.com/ios/50/000000/user--v1.png'}
+                        alt="image"
+                        className="account-page-avatar-preview"
+                    />
+                </Col>
                 <Col>
                     <Typography.Title level={1}>
                         {t('Account.Components.AccountTabbedPane.fullName', {
-                            firstName: user?.firstName,
-                            lastName: user?.lastName,
+                            firstName: user.profile.firstName,
+                            lastName: user.profile.lastName,
                         })}
                     </Typography.Title>
                 </Col>
                 <Col>
                     <Typography.Text type="secondary">
                         {t('Account.Components.AccountTabbedPane.userName', {
-                            userName: user?.username,
+                            userName: user.username,
                         })}
                     </Typography.Text>
                 </Col>
             </Row>
             <Tabs activeKey={section} onChange={handleSetActiveTab}>
-                {Object.values(EAccountSection).map((section: EAccountSection) => (
+                {Object.values(EAccountSection).map((sec: EAccountSection) => (
                     <Tabs.TabPane
-                        key={section.toLowerCase()}
+                        key={sec.toLowerCase()}
                         tab={
                             <Typography.Text>
                                 {t('Account.Components.AccountTabbedPane.sectionTab', {
-                                    context: section,
+                                    context: sec,
                                 })}
                             </Typography.Text>
                         }

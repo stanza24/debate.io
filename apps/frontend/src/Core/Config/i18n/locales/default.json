@@ -1,6 +1,8 @@
 {
     "ru": {
         "Account": {},
-        "Layout": {}
+        "Achievements": {},
+        "Layout": {},
+        "Unauthorized": {}
     }
 }

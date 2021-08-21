@@ -40,6 +40,7 @@
   },
   "license": "ISC",
   "dependencies": {
+    "@ant-design/icons": "4.3.0",
     "@debate/common": "1.0.0",
     "@utils-npm/async-utils": "1.0.0",
     "@utils-npm/axios-services": "1.0.0",

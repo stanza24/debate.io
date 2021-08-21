@@ -8,6 +8,21 @@ export const ROUTE = {
     APP: {
         PATH: '/',
     },
+    UNAUTHORIZED: {
+        PATH: '/:unauthorizedStep(|authorization|registration|restore-password)?',
+        LAYOUT: {
+            PATH: '/:unauthorizedStep(authorization|registration|restore-password)',
+        },
+        AUTHORIZATION: {
+            PATH: '/authorization',
+        },
+        REGISTRATION: {
+            PATH: '/registration',
+        },
+        RESTORE_PASSWORD: {
+            PATH: '/restore-password',
+        },
+    },
     CLIENT: {
         LAYOUT_PATH: '/',
         ACCOUNT: {

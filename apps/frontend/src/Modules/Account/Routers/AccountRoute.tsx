@@ -2,9 +2,9 @@ import {HRoute} from '@utils-npm/router-utils/src';
 import type {FunctionComponent} from 'react';
 import {Redirect, Switch} from 'react-router-dom';
 import {ROUTE} from 'Core/Const';
-import {AccountPage} from '../Pages/AccountPage';
 import {Profile} from '../Components/Profile/Profile';
 import {Settings} from '../Components/Profile/Settings';
+import {AccountPage} from '../Pages/AccountPage';
 
 /** Роут модуля личного кабинета. */
 export const AccountRoute: FunctionComponent = () => (

@@ -5,6 +5,23 @@
             "userName": "@{{userName}}",
             "sectionTab_PROFILE": "Профиль",
             "sectionTab_SETTINGS": "Настройки"
+        },
+        "AchievementsCard": {
+            "title": "Достижения"
+        },
+        "ProfileCard": {
+            "title": "Профиль",
+            "extra": "Редактировать",
+            "fields": {
+                "email": "Почта",
+                "countryName": "Страна",
+                "aboutMe": "Обо мне"
+            }
+        },
+        "StatisticCard": {
+            "title": "Статистика",
+            "rank": "{{rank}} ур.",
+            "exp": "{{exp}}/{{expToNewRank}}"
         }
     }
 }

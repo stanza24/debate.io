@@ -13,7 +13,7 @@ const EXCLUDE_REACT_CONFIG = {
         'react-dom': 'ReactDOM',
     },
 };
-const getOtherWebpackConfig = () => USE_CDN_REACT ? EXCLUDE_REACT_CONFIG : {};
+const getOtherWebpackConfig = () => (USE_CDN_REACT ? EXCLUDE_REACT_CONFIG : {});
 
 /**
  *

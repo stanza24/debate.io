@@ -6,9 +6,9 @@ export const mockPath = 'assets/mocks/';
 /**
  * Путь для доступа к сервисам.
  */
-export const restPath = 'rest';
+export const restPath = 'api';
 
 /**
  * Использовать ли бэковские сервисы или фронтовые моки.
  */
-export const restActive = false;
+export const restActive = true;

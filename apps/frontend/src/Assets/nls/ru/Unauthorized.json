@@ -1,0 +1,102 @@
+{
+    "Registration": {
+        "title": "Регистрация",
+        "Actions": {
+            "signUp": "Зарегистрироваться",
+            "forgotPassword": {
+                "goToRestorePassword": "Забыли пароль?"
+            }
+        },
+        "error": {
+            "message": "Произошла ошибка при регистрации"
+        }
+    },
+    "Authorization": {
+        "title": "Авторизация",
+        "Actions": {
+            "signIn": "Войти",
+            "haventAccount": {
+                "title": "Нужна учётная запись?",
+                "goToRegistration": "Зарегистрироваться"
+            },
+            "forgotPassword": {
+                "goToRestorePassword": "Забыли пароль?"
+            }
+        },
+        "successful": {
+            "message": "Добро пожаловать, {{username}}"
+        },
+        "error": {
+            "message": "Неверный логин или пароль"
+        }
+    },
+    "RestorePassword": {
+        "title": "Восстановление пароля",
+        "Actions": {
+            "restore": "Восстановить",
+            "goBackToToAuthorization": {
+                "title": "Вспомнили пароль?",
+                "goToAuthorization": "Войти"
+            }
+        },
+        "Successful": {
+            "message": "Новый пароль отправлен на электронную почту {{email}}"
+        }
+    },
+    "ChangePassword": {
+        "title": "Смена пароля",
+        "Actions": {
+            "change": "Сменить"
+        },
+        "Successful": {
+            "message": "Пароль успешно изменён"
+        }
+    },
+    "Form": {
+        "loginOrEmail": "Логин или электронная почта",
+        "loginOrEmail_placeholder": "Введите ваш логин или электронную почту",
+        "login": "Логин",
+        "login_placeholder": "Введите ваш логин",
+        "password": "Пароль",
+        "password_placeholder": "Введите ваш пароль",
+        "oldPassword": "Старый пароль",
+        "oldPassword_placeholder": "Введите ваш предыдущий пароль",
+        "newPassword": "Новый пароль",
+        "newPassword_placeholder": "Придумайте ваш пароль",
+        "repeatPassword": "Повторите пароль",
+        "repeatPassword_placeholder": "Повторите пароль",
+        "email": "E-mail",
+        "email_placeholder": "Введите вашу электронную почту"
+    },
+    "Validation": {
+        "freeField": {
+            "empty": "Поле обязательно к заполнению",
+            "hasSpaceSymbols": "Поле не должно содержать пробелы",
+            "minCount": "Логин слишком короткий",
+            "ruSymbols": "Логин должен содержать только латинские символы",
+            "incorrectEmail": "Некорректная электронная почта"
+        },
+        "login": {
+            "empty": "Поле обязательно к заполнению",
+            "hasSpaceSymbols": "Поле логин не должно содержать пробельные символы",
+            "minCount": "Логин слишком короткий",
+            "ruSymbols": "Логин должен содержать только латинские символы"
+        },
+        "password": {
+            "empty": "Поле обязательно к заполнению",
+            "hasSpaceSymbols": "Пароль не должно содержать пробельные символы",
+            "isNotEqual": "Пароли не совпадают",
+            "minCount": "Пароль слишком короткий",
+            "ruSymbols": "Пароль должен содержать только латинские символы, цифры или спецсимволы - $@$!%*#?&",
+            "restrictedPattern": "Слишком простой пароль",
+            "veryWeek_0": "Пароль слишком короткий",
+            "veryWeek_1": "Пароль ненадёжен, используйте прописные и заглавные буквы",
+            "veryWeek_2": "Пароль ненадёжен, используйте прописные и заглавные буквы и цифры",
+            "veryWeek_3": "Пароль ненадёжен, используйте прописные и заглавные буквы, цифры и спецсимволы - $@$!%*#?&"
+        },
+        "email": {
+            "empty": "Поле обязательно к заполнению",
+            "incorrect": "Некорректная электронная почта"
+        }
+    }
+}

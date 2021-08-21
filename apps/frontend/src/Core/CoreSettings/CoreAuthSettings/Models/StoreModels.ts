@@ -6,9 +6,11 @@ import {Reducer} from 'redux-actions';
  * Стейт модуля Authorization.
  *
  * @prop user Стейт юзера.
+ * @prop anyAsyncAuthProcess Стейт статуса авторизационных процессов.
  */
 export interface ICoreAuthSettingsState {
     user: IAsyncData<IUser>;
+    anyAsyncAuthProcess: IAsyncData<void>;
 }
 
 /**

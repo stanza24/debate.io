@@ -1,12 +1,9 @@
 import {ruRU} from '@debate/common/src/Const';
-// @ts-ignore
 import {ConfigProvider} from 'antd';
 import type {FunctionComponent} from 'react';
-// @ts-ignore
+// eslint-disable-next-line import/no-extraneous-dependencies
 import {hot} from 'react-hot-loader/root';
-// @ts-ignore
 import {I18nextProvider} from 'react-i18next';
-// @ts-ignore
 import {Provider} from 'react-redux';
 import {i18next} from 'Core/Config/i18n';
 import {AppRouter} from 'Routers/AppRouter';
@@ -22,3 +19,11 @@ export const App: FunctionComponent = hot(() => (
         </ConfigProvider>
     </I18nextProvider>
 ));
+
+// wss.onMessage((message) => {
+//     switch (message.type) {
+//         case 'getUsersList': {
+//             redux(message);
+//         }
+//     }
+// })
