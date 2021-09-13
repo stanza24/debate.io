@@ -1,5 +1,5 @@
 import colors from 'colors';
-import {getLoggingTimeStamp} from '../../utils/date';
+import {getLoggingTimeStamp} from 'utils/date';
 
 const info = (namespace: string, message: string, object?: any) => {
     if (object) {

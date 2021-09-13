@@ -1,14 +1,17 @@
-import {appConfig} from '../../config/appConfig';
+import {config} from 'config/app.config';
 
+/**
+ * Mailer SMTP options.
+ */
 const mailerConfig = {
-    ...appConfig.mailer,
+    ...config.mailer,
     transporterOptions: {
-        host: 'smtp.yandex.ru',
+        host: 'smtp.gmail.com',
         port: 465,
         secure: true,
         auth: {
-            user: appConfig.mailer.user,
-            pass: appConfig.mailer.password,
+            user: config.mailer.user,
+            pass: config.mailer.password,
         },
     },
 };

@@ -1,14 +1,10 @@
-import dotenv from "dotenv";
 import {createServer} from "./server";
-
-dotenv.config();
-
-const PORT = process.env.PORT || 4200;
+import {config} from "config/app.config";
 
 createServer()
     .then((app) => {
-        app.listen(PORT, () => {
-            console.log(`Server was started on port ${PORT}...`)
+        app.listen(config.server.port, () => {
+            console.log(`Server was started on port ${config.server.port}...`)
         })
     })
     .catch((error) => {

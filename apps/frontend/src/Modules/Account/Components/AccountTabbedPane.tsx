@@ -1,12 +1,12 @@
 import {Col, Image, Row, Tabs, Typography} from 'antd';
 import type {FunctionComponent} from 'react';
 import {useCallback} from 'react';
-import {useTranslation} from 'react-i18next';
-import {useSelector} from 'react-redux';
 import {ROUTE} from 'Core/Const';
 import {userSelector} from 'Core/CoreSettings/CoreAuthSettings/Store/Selectors/CoreAuthSettingsSelector';
 import {RouterUtils} from 'Core/Utils/RouterUtils';
 import {EAccountSection} from '../Enums/AccounEnum';
+import {useTranslation} from 'react-i18next';
+import {useSelector} from 'react-redux';
 
 /**
  * Модель прокидываемых в компонент свойств.

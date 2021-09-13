@@ -1,5 +1,5 @@
 import {Router} from "express";
-import {ROUTE} from "../../../const/routeConst";
+import {ROUTE} from "core/const/routeConst";
 import {debatesController} from "../controller";
 
 const debatesRouter = Router();

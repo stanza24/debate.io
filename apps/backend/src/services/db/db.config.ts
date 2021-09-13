@@ -1,6 +1,8 @@
-import {appConfig} from '../../config/appConfig';
+import {config} from 'config/app.config';
 
-/** Настройки подключения к базе данных. */
+/**
+ * Database connection settings.
+ */
 const options = {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -9,6 +11,6 @@ const options = {
 };
 
 export default {
-    host: appConfig.mongo.host,
+    host: config.mongo.host,
     options,
 };

@@ -1,8 +1,9 @@
-import mwBodyParser from './bodyParser';
-import mwCors from './cors';
-import mwLogger from './logger';
-import type {TMiddleware, TMiddlewareRow} from './models';
+import mwBodyParser from './bodyParser.mw';
+import mwCors from './cors.mw';
+import mwLogger from './logger.mw';
+import type {TMiddlewareRow} from './models';
+import mwException from "./exception";
 
-const middlewares: (TMiddleware | TMiddlewareRow)[] = [mwBodyParser, mwCors, mwLogger];
+export const preMiddlewares: TMiddlewareRow = [...mwBodyParser, mwCors, mwLogger];
 
-export default middlewares;
+export const postMiddlewares: TMiddlewareRow = [mwException];

@@ -1,18 +1,25 @@
-import middlewares from './middlewares';
+import {postMiddlewares, preMiddlewares} from './middlewares';
 import type {Application} from 'express';
 import type {TMiddleware} from './models';
 
 /**
- * Функция применяет мидлвары к серверу.
+ * Функция применяет премидлвары к серверу.
  *
  * @param app Приложение.
  */
-export const useMiddlewares = (app: Application) => {
-    middlewares.forEach((middleware: TMiddleware) => {
-        if (Array.isArray(middleware)) {
-            middleware.forEach((mw) => app.use(mw));
-        } else {
-            app.use(middleware);
-        }
+export const usePreMiddlewares = (app: Application) => {
+    preMiddlewares.forEach((middleware: TMiddleware) => {
+        app.use(middleware);
+    });
+};
+
+/**
+ * Функция применяет постмидлвары к серверу.
+ *
+ * @param app Приложение.
+ */
+export const usePostMiddlewares = (app: Application) => {
+    postMiddlewares.forEach((middleware: TMiddleware) => {
+        app.use(middleware);
     });
 };

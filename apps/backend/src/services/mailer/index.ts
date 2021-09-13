@@ -1,1 +1,1 @@
-export {IEmailResultsHandlers, sendEmail} from './mailer';
+export {sendEmail} from './mailer';

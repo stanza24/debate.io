@@ -1,8 +1,8 @@
-import {Request, Response} from 'express';
-import {EHttpResponseStatus} from '../../../Core/Enum/httpEnum';
+import type {Request, Response} from 'express';
 import {logger} from '../../../services/logger';
 import BookSchema from '../schema/Book';
 import {EAuthorizationControllerFailureMessages} from '../../authorization/enum/authorization.enum';
+import { EHttpResponseStatus } from 'common/enum';
 
 const NAMESPACE = 'DebatesController';
 
